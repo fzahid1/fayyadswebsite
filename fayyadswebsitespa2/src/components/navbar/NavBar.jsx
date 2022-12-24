@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import {FaBars, FaFacebook, FaInstagram, FaLinkedin, FaTimes} from 'react-icons/fa'
-import {GiCarWheel} from 'react-icons/gi'
 import './NavBarStyles.css'
+import { Link } from 'react-scroll'
+
 
 const NavBar = () => {
 
@@ -13,6 +14,10 @@ const NavBar = () => {
         setSlide(!slide)
     }
 
+    const handleClose = () => {
+        setNav(!nav)
+    }
+
     return (
         <div className='navbar'>
             <div className="container">
@@ -21,10 +26,10 @@ const NavBar = () => {
                 </div>
 
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
-                    <li><a href="/">About Me</a></li>
-                    <li><a href="/">Travels</a></li>
-                    <li><a href="/">Experience</a></li>
-                    <li><a href="/">Education</a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="aboutme" spy={true} smooth={true} duration={500}>About Me</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="travels" spy={true} smooth={true} duration={500}>Travels</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="experience" spy={true} smooth={true} duration={500}>Experience</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="education" spy={true} smooth={true} duration={500}>Education</Link></a></li>
 
                     <div className='mobile-menu'>
                         <button>Social Media</button>

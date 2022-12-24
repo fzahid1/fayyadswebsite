@@ -17,6 +17,13 @@
     margin-top: 7rem;
     color: #f6f6f6;
 }
+
+.aboutme .body {
+    justify-content: center;
+    display: flex;
+    margin-top: 7rem;
+}
+
 .aboutme .bottom {
     display: flex;
     justify-content: center;
