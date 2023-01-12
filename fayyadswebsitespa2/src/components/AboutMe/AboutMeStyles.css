@@ -21,7 +21,9 @@
 .aboutme .body {
     justify-content: center;
     display: flex;
-    margin-top: 7rem;
+    margin: 3rem;
+    font-size: 3rem;
+    color: #f6f6f6;
 }
 
 .aboutme .bottom {
